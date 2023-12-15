@@ -14,11 +14,17 @@ const argv = yargs
     type: 'number',
     default: 100,
   })
+  .help()
+  .alias('help', 'h')
+  .usage('Usage: $0 <url> [width [height [cols [rows]]]] [--maxsize] [--timeout]')
+  .example('$0 http://127.0.0.1:8080', 'Render a collage with default parameters')
+  .example('$0 http://127.0.0.1:8080 800 600 5 4 --maxsize=5000 --timeout=200', 'Render a collage with custom parameters')
+  .demandCommand(1, 'You must provide at least one argument for the URL.')
   .argv;
 
 (async () => {
-  const args = process.argv.slice(2);
-  const url = args[0] || 'http://127.0.0.1:8080';
+  const args = argv._;
+  const url = args[0];
   const width = parseInt(args[1]) || 512;
   const height = parseInt(args[2]) || width;
   const cols = parseInt(args[3]) || 4;
