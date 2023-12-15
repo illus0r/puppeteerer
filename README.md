@@ -1,4 +1,4 @@
-# puppeteerrer
+# puppeteerer
 
 Takes a bunch of screenshots of a given site and stacks them in a grid.
 
