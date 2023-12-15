@@ -1,3 +1,5 @@
+#!/usr/bin/env node
+
 const puppeteer = require('puppeteer');
 const { createCanvas, loadImage } = require('canvas');
 const fs = require('fs');
@@ -32,7 +34,7 @@ const argv = yargs
 
   const browser = await puppeteer.launch({ headless: false });
   let rndStr = Math.random().toString(36).substring(2, 15);
-  let dir = `/Users/ivandianov/Downloads/${rndStr}`;
+	let dir = process.cwd() + `/${rndStr}`;
   let size = [width, height];
   let num = cols * rows;
   let maxCollageSize = argv.maxsize;
@@ -77,4 +79,3 @@ const argv = yargs
 
   await createCollage(screenshots);
 })();
-
