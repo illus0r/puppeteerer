@@ -1,4 +1,4 @@
-to install globally run
+To install globally run
 ```
 git clone https://github.com/illus0r/puppeteerer/
 cd puppeteerer
@@ -9,8 +9,8 @@ To learn about parameters, run
 ```
 puppeteerer --help
 ```
-Here's what it will print:
 
+Here's what it prints:
 ```
 Usage: puppeteerrer <url> [width [height [cols [rows]]]] [--maxsize] [--timeout]
 
