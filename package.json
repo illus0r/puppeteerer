@@ -1,7 +1,17 @@
 {
+  "name": "puppeteerer",
+  "version": "1.0.0",
+  "description": "A Puppeteer script with command-line options",
+  "bin": {
+    "puppeteerrer": "./index.js"
+  },
+  "scripts": {
+    "start": "node index.js"
+  },
   "dependencies": {
     "canvas": "^2.11.2",
     "puppeteer": "^21.3.8",
     "yargs": "^17.7.2"
   }
 }
+
